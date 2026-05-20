@@ -11,11 +11,10 @@ export interface Makanan {
   protein: number;
   lemak: number;
   karbohidrat: number;
-  natrium: number;
+  natrium?: number; // PERBAIKAN: Ditambahkan tanda "?" agar opsional dan tidak error di page.tsx
   kode?: string;
   sumber_tkpi?: string;
 }
-
 
 // =========================================================================
 // 2. INTERFACE UNTUK AI PLANNER & NUTRITION ENGINE (JANGAN DIHAPUS)
