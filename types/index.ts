@@ -1,5 +1,25 @@
 // src/types/index.ts
 
+// =========================================================================
+// 1. INTERFACE UNTUK HALAMAN KATALOG (FIX VERCEL DEPLOYMENT ERROR)
+// =========================================================================
+export interface Makanan {
+  id: string | number;
+  nama: string;
+  kategori: string;
+  kalori: number;
+  protein: number;
+  lemak: number;
+  karbohidrat: number;
+  natrium: number;
+  kode?: string;
+  sumber_tkpi?: string;
+}
+
+
+// =========================================================================
+// 2. INTERFACE UNTUK AI PLANNER & NUTRITION ENGINE (JANGAN DIHAPUS)
+// =========================================================================
 export interface Olahan {
   id: string;
   nama_masakan: string;
@@ -55,9 +75,9 @@ export interface FormDataUser {
   gender: string;
   aktivitas: string;
   pantangan: string;
-  targetDiet: string; // Akan dikalkulasi otomatis dari frontend
+  targetDiet: string;
   preferensi: string;
-  target_berat?: number; // Dibuat opsional
+  target_berat?: number;
 }
 
 export interface MacroTargets {
@@ -80,7 +100,7 @@ export interface PredictionEngine {
   kalori_harian_status: string;
   rekomendasi_konsistensi: string;
   pesan_realistis: string;
-  smart_nutrition_insight: string; // FITUR BARU: Alasan Ilmiah Pemilihan Makro
+  smart_nutrition_insight: string;
   warning?: boolean;
 }
 
